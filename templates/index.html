@@ -1,0 +1,129 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>智能合约漏洞检测系统</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static',filename='img/favicon.ico') }}">
+   
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+   
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/nalika-icon.css') }}">
+   
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/normalize.css') }}">
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/metisMenu/metisMenu.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/metisMenu/metisMenu-vertical.css') }}">
+   
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+   
+
+       <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #a{
+            width: 900px;
+            height: 550px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+     <div class="left-sidebar-pro">
+        <nav id="sidebar" class="">
+            <div class="sidebar-header">
+               
+                         
+            </div>
+    
+            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <ul class="metismenu" id="menu1">
+                        <li class="active">
+                            <a class="has-arrow" href="http://localhost:4000/">
+                                   <i class="icon nalika-home icon-wrap"></i>
+                                   <span class="mini-click-non">漏洞检测</span>                             
+                                </a>
+                            <ul class="submenu-angle" aria-expanded="true">
+                                <li><a title="Dashboard v.1" href="http://localhost:4000/"><span class="mini-sub-pro">介绍</span></a></li>
+                                <li><a title="Dashboard v.2" href="http://localhost:4000/solfile"><span class="mini-sub-pro">智能合约源文件</span></a></li>
+                                <li><a title="Dashboard v.3" href="http://localhost:4000/bytecode"> <span class="mini-sub-pro">智能合约字节码</span></a></li>
+                                <li><a title="Product List" href="http://localhost:4000/address"><span class="mini-sub-pro">智能合约地址</span></a></li>
+                               
+                            </ul>
+                        </li>
+                  
+                  </ul>
+                  </nav>
+
+                  
+
+              
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- Start Welcome area -->
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" style="padding-left：1000px;">
+                                        <div class="header-right-info" >
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu" style="margin:0 auto">
+                                    
+												<h1 style="color: white; margin-left: 20px; ">智能合约漏洞检测系统</h1>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            <div id='a' >
+                <span style="color: white;">
+                    &emsp;&emsp;&emsp;&emsp;智能合约安全检测系统，为以太坊智能合约开发者，提供智能合约漏洞检测功能，可以有效帮助用户发现智能合约中存在的的安全问题，以免造成损失。
+                    本漏洞检测系统能够完成对智能合约代码规范漏洞、冲入漏洞、整数溢出漏洞等常见漏洞的检测,但可能存在误报漏报情况，请用户谨慎参考！系统使用方式如下：
+            </span>
+            <br>
+            <span style="color: white;">
+                    &emsp;&emsp;&emsp;&emsp;（1）提供需要检测的智能合约，目前支持三种类型的智能合约输入方式：合约源码文件，合约字节码，合约远程地址。
+            </span>
+            <br>
+            <span style="color: white;">
+                    &emsp;&emsp;&emsp;&emsp;（2）输入合约内容后，在当前页面等待漏洞检测结果。
+            </span>
+        
+<script src="{{url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/metisMenu/metisMenu.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/metisMenu/metisMenu-active.js')}}"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+{% if issues %}
+{% for issue in issues %}
+==============================    {{ issue.title }}    ==============================
+Severity: {{ issue.severity }}
+Contract: {{ issue.contract | default("MAIN") }}
+{% if issue.function %}
+Function name: {{ issue.function }}
+{% endif %}
+----------------------------------------------------------------------------------
+{% if issue.filename and issue.lineno %}
+Bug location: {{ issue.filename }}:{{ issue.lineno }}
+{% endif %}
+{% if issue.code %}
+
+  {{ issue.code }}
+{% else %}
+Bug location:
+  PC address={{issue.address}}
+{% endif %}
+----------------------------------------------------------------------------------
+Description:
+{{ issue.description }}
+----------------------------------------------------------------------------------
+Security solution:
+{% for solution in issue.solutions %}
+  {{ solution }}
+{% endfor %}
+
+{% endfor %}
+
+{% else %}
+智能合约检测完成，没有发现存在漏洞！
+{% endif %}

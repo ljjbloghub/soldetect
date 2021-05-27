@@ -1,0 +1,163 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>智能合约漏洞检测系统</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static',filename='img/favicon.ico') }}">
+   
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+   
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/nalika-icon.css') }}">
+   
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/normalize.css') }}">
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/metisMenu/metisMenu.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/metisMenu/metisMenu-vertical.css') }}">
+   
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+
+       <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #a{
+            width: 700px;
+            height: 300px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="left-sidebar-pro">
+        <nav id="sidebar" class="">
+            <div class="sidebar-header">
+           
+            </div>
+	
+            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <ul class="metismenu" id="menu1">
+                        <li class="active">
+                            <a class="has-arrow" href="http://localhost:4000/">
+                                   <i class="icon nalika-home icon-wrap"></i>
+                                   <span class="mini-click-non">漏洞检测</span>                             
+                                </a>
+                            <ul class="submenu-angle" aria-expanded="true">
+                                <li><a title="Dashboard v.1" href="http://localhost:4000/"><span class="mini-sub-pro">介绍</span></a></li>
+                                <li><a title="Dashboard v.2" href="http://localhost:4000/solfile"><span class="mini-sub-pro">智能合约源文件</span></a></li>
+                                <li><a title="Dashboard v.3" href="http://localhost:4000/bytecode"> <span class="mini-sub-pro">智能合约字节码</span></a></li>
+                                <li><a title="Product List" href="http://localhost:4000/address"><span class="mini-sub-pro">智能合约地址</span></a></li>
+                                <li><a title="Product List" href="http://localhost:4000/scanstate"><span class="mini-sub-pro">漏洞检测任务</span></a></li>
+                               
+                            </ul>
+                        </li>
+                  
+                  </ul>
+                  </nav>
+
+                  
+
+              
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- Start Welcome area -->
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" style="padding-left：1000px;">
+                                        <div class="header-right-info" >
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu" style="margin:0 auto">
+                                    
+												<h1 style="color: white; margin-left: 20px; ">智能合约漏洞检测系统</h1>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+                {% if get %}
+            <div id='a'>
+        
+                <h3 style="color:white;margin-left: 120px">漏洞检测任务</h3>
+                 
+                <table border="1" style="color:white;">   
+                <tr>
+                <th>序号</th>
+                <th>漏洞检测用时</th>
+                <th>漏洞检测文件</th>
+                <th>检测状态</th>
+                <th>操作</th>
+                </tr>
+
+                <tr>
+                <th>1</th>
+                <th>20.5s</th>
+                <th>Reentrancy.sol</th>
+                <th>检测完成  </th>
+                <th><a>查看</a> <a>删除</a>  </th>
+                </tr>
+
+                <tr>
+                <th>2</th>
+                <th>22.5s</th>
+                <th>random_numbner.sol</th>
+                <th>检测完成  </th>
+                <th><a>查看</a> <a>删除</a>  </th>
+                </tr>
+
+                <tr>
+                <th>4</th>
+                <th>19.3s</th>
+                <th>predicte_var.sol</th>
+                <th>检测完成  </th>
+                <th><a>查看</a> <a>删除</a>  </th>
+                </tr>
+
+                <tr>
+                <th>5</th>
+                <th>无效文件</th>
+                <th>wrong-file.sol</th>
+                <th>检测失败  </th>
+                <th><a>删除</a>  </th>
+                </tr>
+                </table>
+            </div>
+        {% else %}
+
+        {% endif %}
+        
+<script src="{{url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/metisMenu/metisMenu.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/metisMenu/metisMenu-active.js')}}"></script>
+</body>
+
+</html>

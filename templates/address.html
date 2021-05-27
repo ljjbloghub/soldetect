@@ -1,0 +1,183 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>智能合约漏洞检测系统</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static',filename='img/favicon.ico') }}">
+   
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+   
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/nalika-icon.css') }}">
+   
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/normalize.css') }}">
+    
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/metisMenu/metisMenu.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/metisMenu/metisMenu-vertical.css') }}">
+   
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+
+       <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #a{
+            width: 700px;
+            height: 500px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: auto;
+        }
+        .loadingcss{
+            height: 50%;
+            width: 60%;
+            position:absolute;
+            left: 40%;
+            top: 5%;
+            background-color: rgba(0,0,0,0);/*显示遮罩层背景颜色和透明度*/
+            /*如果上边的效果不理想可以分开实现背景颜色的透明度,背景颜色和透明度可自行调节*/
+            /*
+                background-color: #ccc;
+                filter:alpha(Opacity=80);-moz-opacity: 0.5;opacity: 0.5;
+            */
+        }
+        .my-content{
+  /*position: absolute;*/
+            width: 700px;
+            height: 500px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: auto;
+            margin-bottom: 41px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="left-sidebar-pro">
+        <nav id="sidebar" class="">
+            <div class="sidebar-header">
+            
+            </div>
+	
+            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <ul class="metismenu" id="menu1">
+                        <li class="active">
+                            <a class="has-arrow" href="http://localhost:4000/">
+                                   <i class="icon nalika-home icon-wrap"></i>
+                                   <span class="mini-click-non">漏洞检测</span>                             
+                                </a>
+                            <ul class="submenu-angle" aria-expanded="true">
+                                <li><a title="Dashboard v.1" href="http://localhost:4000/"><span class="mini-sub-pro">介绍</span></a></li>
+                                <li><a title="Dashboard v.2" href="http://localhost:4000/solfile"><span class="mini-sub-pro">智能合约源文件</span></a></li>
+                                <li><a title="Dashboard v.3" href="http://localhost:4000/bytecode"> <span class="mini-sub-pro">智能合约字节码</span></a></li>
+                                <li><a title="Product List" href="http://localhost:4000/address"><span class="mini-sub-pro">智能合约地址</span></a></li>
+                               
+                            </ul>
+                        </li>
+                  
+                  </ul>
+                  </nav>
+
+                  
+
+              
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- Start Welcome area -->
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" style="padding-left：1000px;">
+                                        <div class="header-right-info" >
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu" style="margin:0 auto">
+                                    
+												<h1 style="color: white; margin-left: 20px; ">智能合约漏洞检测系统</h1>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+        {% if get %}
+        <div id='a'>
+                <h3 style="color:white;margin-left: 140px">智能合约地址漏洞检测</h3>
+
+                <form action="" method="POST" enctype="multipart/form-data">
+                    
+                    <div class="container">
+                        <label >
+                            <input  name="address" id="upExcelBtn" class="btn btn-default" type="text"  placeholder="输入智能合约URL进行安全检测" style=" width: 450px;height: 30px;position: fixed;" onfocus="this.placeholder=''">
+                    
+                            </div>
+                            
+                        </label>
+                    <div >
+                             
+                        <input type="submit" class="btn btn-info" style="margin-left:480px;margin-top:-15px" onclick="showsapn()" value="漏洞检测">
+                         <span id="loading" class="loadingcss" style="display: none">
+                            <img src="{{url_for('static',filename='img/loading.gif')}}"  style='text-align:center;margin:0 auto;margin-top:25%; '>
+                         </span>
+                    
+                       
+                    </div>
+                </form>
+                
+            </div>
+
+        {% else %}
+            <div id='a'>
+            <h1 style='color:white;'>检测完成！用时：{{data.analyzetime}} Seconds</h1><br>
+            <h1 style='color:white;'>检测结果：</h1><br>
+            <div class='my-content'  style="color: white;overflow:auto">
+                
+                <pre>{{ data.dectresult}}</pre>
+            </div>
+            </div>
+
+        {% endif%}
+
+    <script type="text/javascript">
+        function showsapn(argument) {
+            var emailInfoSpan = document.getElementById('loading');
+
+                emailInfoSpan.style.display='';
+            
+        }     
+    </script>
+<script src="{{url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/metisMenu/metisMenu.min.js')}}"></script>
+<script src="{{url_for('static',filename='js/metisMenu/metisMenu-active.js')}}"></script>
+   
+</body>
+
+</html>

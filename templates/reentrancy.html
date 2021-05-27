@@ -1,0 +1,237 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Dashboard V.1</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- nalika Icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/nalika-icon.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+       <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #a{
+            width: 700px;
+            height: 200px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: auto;
+        }
+     
+    </style>
+</head>
+
+<body>
+
+    <div class="left-sidebar-pro">
+        <nav id="sidebar" class="">
+            <div class="sidebar-header">
+           
+            </div>
+	
+            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <ul class="metismenu" id="menu1">
+                        <li class="active">
+                            <a class="has-arrow" href="index.html">
+								   <i class="icon nalika-home icon-wrap"></i>
+								   <span class="mini-click-non">漏洞检测</span>								
+                                </a>
+                            <ul class="submenu-angle" aria-expanded="true">
+                                <li><a title="Dashboard v.1" href="introduce.html"><span class="mini-sub-pro">介绍</span></a></li>
+                                <li><a title="Dashboard v.2" href="solfile.html"><span class="mini-sub-pro">智能合约源文件</span></a></li>
+                                <li><a title="Dashboard v.3" href="bytecode.html"> <span class="mini-sub-pro">智能合约字节码</span></a></li>
+                                <li><a title="Product List" href="address.html"><span class="mini-sub-pro">智能合约地址</span></a></li>
+                                <li><a title="Product List" href="scanstate.html"><span class="mini-sub-pro">漏洞检测任务</span></a></li>
+                               
+                            </ul>
+                        </li>
+                  
+                  </ul>
+                  </nav>
+
+                  
+
+              
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- Start Welcome area -->
+        <div class="header-advance-area">
+            <div class="header-top-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="header-top-wraper">
+                                <div class="row">
+                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" style="padding-left：1000px;">
+                                        <div class="header-right-info" >
+                                            <ul class="nav navbar-nav mai-top-nav header-right-menu" style="margin:0 auto">
+                                    
+												<h1 style="color: white; margin-left: 20px; ">智能合约漏洞检测系统</h1>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            <div id='a'>
+        
+                <h3 style="color:white;margin-left: 230px">漏洞检测报告</h3>
+
+                <table  width="600" border="1" style="color:white;">
+ 
+                 <tr>
+                     <th> <td colspan="3" align="center" ><font size="5">==== 代码重入漏洞 ====</font></td></th>>
+                 </tr>
+                    
+                <tr><th><td><font font-weight: bold;  size="3" color="RoyalBlue" face= "DFKai-sb">Severity:</font> <font color="green">Low</font></td></th>></tr>
+                <tr><th><td><font font-weight: bold;  size="3" color="RoyalBlue" face= "DFKai-sb" >Contract name:</font> SimpleDAO</td></th>></tr>
+                <tr><th><td><font font-weight: bold;  size="3" color="RoyalBlue" face= "DFKai-sb" >Function name:</font> withdraw(uint256)</td></th>></tr>
+                <tr><th><td><font font-weight: bold;  size="3" color="RoyalBlue" face= "DFKai-sb" >Bug location:</font> Reentrancy.sol:13<br>
+
+ &emsp;&emsp;&emsp;&emsp;msg.sender.call.value(amount)()
+                </td></th>></tr>
+                  <tr><th><td><font font-weight: bold;  size="3" color="RoyalBlue" face= "DFKai-sb" >Description:</font><br>
+    &emsp;&emsp;&emsp;&emsp;重入攻击（又称递归调用攻击）可以接管控制流，智能合约在函数的第一次调用完成之前回调到调用合约中。这可能导致函数间的调用以不被希望的方式进行交互。
+                </td></th>></tr>
+                  <tr><th><td><font font-weight: bold; size="3" color="RoyalBlue" face= "DFKai-sb">Security solution:</font><br>
+    &emsp;&emsp;&emsp;&emsp;1）在需要进行以太币交易时，使用transfer()或send()函数，此类函数只会使用2300个gas用于处理转币操作；<br>
+     &emsp;&emsp;&emsp;&emsp;2）是在以太币被合约发送出去之前，对合约中的所有状态变量进行改变的；<br>
+     &emsp;&emsp;&emsp;&emsp;3）保证在合约执行的时候引入互斥锁，保证状态变量不会被改变从而防止重入漏洞。
+                </td></th>></tr>
+
+
+
+               </table >
+          
+                    
+
+            </div>
+        
+    <!-- jquery
+		============================================ -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="js/metisMenu/metisMenu.min.js"></script>
+    <script src="js/metisMenu/metisMenu-active.js"></script>
+    <!-- sparkline JS
+		============================================ -->
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+    <!-- calendar JS
+		============================================ -->
+    <script src="js/calendar/moment.min.js"></script>
+    <script src="js/calendar/fullcalendar.min.js"></script>
+    <script src="js/calendar/fullcalendar-active.js"></script>
+	<!-- float JS
+		============================================ -->
+    <script src="js/flot/jquery.flot.js"></script>
+    <script src="js/flot/jquery.flot.resize.js"></script>
+    <script src="js/flot/curvedLines.js"></script>
+    <script src="js/flot/flot-active.js"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="js/plugins.js"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
